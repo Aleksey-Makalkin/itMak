@@ -35,6 +35,9 @@
 
 body {
     background: darken(white, 6%);
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
 }
 
 .header {
@@ -78,10 +81,61 @@ body {
         padding: 7px;
         border-radius: 3px;
         padding-left: 10px;
-        vertical-align: middle;
         font-weight: 400;
         outline-color: $main-darken-color;
     }
+}
+
+.searchFullScrin {
+    display: none;
+    z-index: 10;
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+
+    background: rgba(198, 198, 198, 0.9);
+
+    .posit-search-full {
+        position: relative;
+        top: 100px;
+        left: 16%;
+
+        .form-search {
+            margin-bottom: 40px;
+
+            span {
+                font-size: 30px;
+                color: $main-darken-color;
+            }
+        }
+
+        .search-input-full {
+            margin-top: 10px;
+
+            input {
+                @extend %buttons;
+                background: $main-darken-color;
+                border: 1px solid darken($main-darken-color, 15%);
+                &:hover {
+                    background: darken($main-darken-color, 8%);
+                }
+            }
+        }
+
+        [name="searchFull"] {
+            width: 65%;
+            border: 1px solid silver;
+            padding: 7px;
+            font-size: 17px;
+            border-radius: 3px;
+            padding-left: 10px;
+            font-weight: 400;
+            outline-color: $main-darken-color;
+        }
+    }
+
+
 }
 
 .navigation {
@@ -96,7 +150,7 @@ body {
         background: darken(white, 3%);
         transition: all 0.5s ease;
         &:hover {
-            background-color: darken(white, 10%);
+            background-color: darken(white, 15%);
         }
     }
 }
@@ -128,7 +182,7 @@ body {
     background: #F42A3B;
 
     &:hover {
-        background-color: darken(#F42A3B, 8%);
+        background-color: #F85664;
     }
 }
 
@@ -198,7 +252,7 @@ body {
                 color: black;
                 margin-top: 0px;
                 &:hover {
-                    background-color: darken(#F0B637, 10%);
+                    background-color: darken(#F0B637, 13%);
                 }
             }
         }
@@ -250,7 +304,7 @@ body {
                 background: white;
                 color: black;
                 &:hover {
-                    background-color: darken(white, 10%)
+                    background-color: darken(white, 13%)
                 }
             }
         }
@@ -266,7 +320,7 @@ body {
         @extend %buttons;
         background: #dc3545;
         &:hover {
-            background-color: darken(#dc3545, 10%);
+            background-color: darken(#dc3545, 11%);
         }
     }
 }
@@ -344,7 +398,12 @@ body {
 @media (max-width: 991px) {
 
     .searched {
-        display: none;
+        .search {
+            width: 100%;
+            margin-left: 15px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
     }
 
     .title-logo, .title-logo + h3 {
@@ -370,6 +429,17 @@ body {
         input {
             position: relative;
             left: 39%;
+        }
+    }
+
+    .searchFullScrin {
+        .posit-search-full {
+            position: relative;
+            left: 5%;
+
+            [name="searchFull"] {
+                width: 90%;
+            }
         }
     }
 
@@ -403,6 +473,11 @@ body {
     .logo-img {
         position: relative;
         left: 5px;
+    }
+
+    .search {
+        position: relative;
+        right: 8px;
     }
 
     .present-image {

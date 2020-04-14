@@ -49,3 +49,20 @@ loadMore.onclick = function() {
         loadMore.style.display = "none";
     }
 }
+
+
+
+
+var search = document.querySelector(".search");
+
+search.onclick = function() {
+    search.style.visibility = "hidden";
+    document.querySelector(".searchFullScrin").style.display = "block";
+}
+
+
+document.querySelector(".search-input-full input").onclick = function() {
+    search.style.visibility = "visible";
+    document.querySelector(".searchFullScrin").style.display = "none";
+    document.querySelector('[name="searchFull"]').value = "";
+}
