@@ -460,16 +460,6 @@ body {
         left: 25px;
     }
 
-    .title-logo {
-        position: relative; left: 50px;
-        top: 11px;
-    }
-
-    .title-logo + h3{
-        position: relative; left: 180px;
-        bottom: 16px;
-    }
-
     .logo-img {
         position: relative;
         left: 5px;
@@ -519,18 +509,6 @@ body {
 
 @media (max-width: 575px) {
 
-    .title-logo {
-        position: relative;
-        left: 35px;
-        top: 11px;
-    }
-
-    .title-logo + h3{
-        position: relative;
-        left: 170px;
-        bottom: 16px;
-    }
-
     .present-image {
         position: relative;
         left: 0%;
@@ -574,6 +552,19 @@ body {
 
 
 
+@media (max-width: 490px) {
+    .title-logo {
+        position: relative;
+        left: -10px;
+    }
+
+    .title-logo + h3{
+        position: relative;
+        left: -10px;
+    }
+}
+
+
 @media (max-width: 399px) {
     .present-title h4 {
         font-size: 25px;
@@ -589,6 +580,16 @@ body {
     #margin-load-more-one, #margin-load-more-two {
         position: relative;
         top: 620px;
+    }
+
+    .title-logo {
+        position: relative;
+        left: 20px;
+    }
+
+    .title-logo + h3{
+        position: relative;
+        left: 20px;
     }
 
 }
