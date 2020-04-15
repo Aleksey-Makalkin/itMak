@@ -1,6 +1,8 @@
 const gulp = require('gulp');
 const htmlminify = require("gulp-html-minify");
 const scss = require ("gulp-sass");
+const autoprefixer = require('gulp-autoprefixer');
+const cleanCSS = require('gulp-clean-css');
 const uglify = require('gulp-uglify');
 const pipeline = require('readable-stream').pipeline;
 const imagemin = require('gulp-imagemin');
@@ -13,9 +15,12 @@ gulp.task('build-html', function() {
 
 gulp.task('build-sass', function() {
     return gulp.src("app/style/*.scss")
-    .pipe (scss({
-        outputStyle: "compressed"
+    .pipe (scss())
+    .pipe (autoprefixer({
+        overrideBrowserslist: ['last 10 versions'],
+        cascade: false
     }))
+    .pipe (cleanCSS())
     .pipe (gulp.dest("public/style/"))
 });
 
