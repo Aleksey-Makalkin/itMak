@@ -1,6 +1,9 @@
 document.querySelector("input[value='Статьи']").onclick = function() {
         location.href = "articles.html";
 }
+document.querySelector("#unreal-vs-unity").onclick = function() {
+        location.href = "articles.html";
+}
 
 
 
@@ -73,20 +76,3 @@ document.querySelector(".search-input-full input").onclick = function() {
     document.querySelector(".searchFullScrin").style.display = "none";
     document.querySelector('[name="searchFull"]').value = "";
 }
-
-
-
-// ----------------------------------------------------------
-
-var result;
-result = document.body;
-
-document.querySelector('[name="searchFull"]').oninput = function() {
-    document.querySelector('[name="searchFull"]').value
-}
-
-
-
-
-
-console.log(result.innerHTML);

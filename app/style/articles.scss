@@ -8,7 +8,7 @@
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
-    background: no-repeat center url(../media/Unreal4-vs-Unity5.jpg);
+    background: no-repeat center url(../media/Unreal4-vs-Unity5-articles.jpg);
     background-size: 100%;
 }
 
@@ -27,4 +27,11 @@
         font-weight: 600;
         margin: 20px;
     }
+}
+
+.img-text-article {
+    margin: 25px;
+    height: 300px;
+    background: darken(white, 10%);
+    border-radius: 5px;
 }
