@@ -1,3 +1,9 @@
+document.querySelector("input[value='Статьи']").onclick = function() {
+        location.href = "articles.html";
+}
+
+
+
 var loadMore = document.getElementsByName("loadMore")[0];
 var load = 4;
 
@@ -67,3 +73,20 @@ document.querySelector(".search-input-full input").onclick = function() {
     document.querySelector(".searchFullScrin").style.display = "none";
     document.querySelector('[name="searchFull"]').value = "";
 }
+
+
+
+// ----------------------------------------------------------
+
+var result;
+result = document.body;
+
+document.querySelector('[name="searchFull"]').oninput = function() {
+    document.querySelector('[name="searchFull"]').value
+}
+
+
+
+
+
+console.log(result.innerHTML);

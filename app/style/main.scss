@@ -140,8 +140,7 @@ body {
 
 .navigation {
     text-align: right;
-    ul li {
-        display: inline-block;
+    input {
         margin-left: 5px;
         padding: 7px 12px;
         border: 1px solid silver;
@@ -149,8 +148,18 @@ body {
         border-radius: 5px;
         background: darken(white, 3%);
         transition: all 0.5s ease;
+        outline: none;
         &:hover {
             background-color: darken(white, 15%);
+            cursor: pointer;
+        }
+    }
+    .nav-active {
+        background: $nav-active-color;
+        border: 1px solid $nav-active-color;
+        &:hover {
+            background-color: $nav-active-color;
+            cursor: default;
         }
     }
 }
@@ -451,13 +460,11 @@ body {
 
     .navigation {
         text-align: center;
-    }
 
-    ul li {
-        margin: 15px 50px;
-        margin-bottom: 0px;
-        position: relative;
-        left: 25px;
+        input {
+            margin: 10px;
+            margin-bottom: 0px;
+        }
     }
 
     .logo-img {
@@ -566,8 +573,21 @@ body {
 
 
 @media (max-width: 399px) {
+
+    .present-image {
+        height: 115px;
+    }
+
     .present-title h4 {
         font-size: 25px;
+    }
+
+    .articles {
+        .artic {
+            .artic-img {
+                height: 85px;
+            }
+        }
     }
 
     .load-all {
@@ -590,6 +610,32 @@ body {
     .title-logo + h3{
         position: relative;
         left: 20px;
+    }
+
+    .navigation {
+
+        input {
+            width: 80%;
+            margin: 7px;
+            margin-bottom: 0px;
+        }
+    }
+
+}
+
+
+@media (max-width: 319px) {
+
+    .load-all {
+        input {
+            position: relative;
+            top: 630px;
+        }
+    }
+
+    #margin-load-more-one, #margin-load-more-two {
+        position: relative;
+        top: 660px;
     }
 
 }
